@@ -1,0 +1,207 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto; /* Ensures vertical scrolling is enabled */
+    background-size: cover; /* Ensures the background covers the entire screen */
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 15px 0;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a shadow for better visibility */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centering the navigation items */
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #007bff; /* Blue background on hover */
+    color: white; /* White text on hover */
+    border-radius: 5px;
+}
+
+header {
+    height: 100px;
+}
+
+section {
+    padding-top: 120px; /* Prevent content from being hidden under the fixed navbar */
+}
+
+#home {
+    min-height: 100vh; /* Ensures the home section takes full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#home h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#home p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#about, #services {
+    min-height: 600px;
+    text-align: center;
+    padding: 40px;
+}
+
+#about {
+    background-color: #f9f9f9;
+}
+
+#services {
+    background-color: #ffffff;
+}
+
+.serv {
+    width: 30%;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.serv h4 {
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.intro {
+    margin-left: 200px;
+    margin-top: 200px;
+}
+
+footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between the icons */
+}
+
+.social-links a {
+    display: inline-block;
+}
+
+.social-links img {
+    transition: transform 0.3s ease; /* Adds a smooth scaling effect */
+}
+
+.social-links img:hover {
+    transform: scale(1.1); /* Slightly enlarge the icon when hovered */
+}
+
+#contact {
+    text-align: center;
+}
+/* Updated contact-form CSS targeting the form by its ID */
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff; /* Add a white background */
+    border-radius: 10px; /* Slight rounding of edges */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+/* Label styles */
+#contact form label {
+    margin: 10px 0 5px;
+    font-size: 1.1em;
+}
+
+/* Input and textarea styles */
+#contact form input, 
+#contact form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.1em;
+    box-sizing: border-box; /* Prevents input fields from overflowing */
+}
+
+/* Button styles */
+#contact form button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact form button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    #contact-form {
+        width: 90%; /* Make the form take more space on smaller screens */
+    }
+}
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .serv {
+        width: 80%; /* Adjust width on smaller screens */
+        margin: 10px auto;
+    }
+
+    #home h1 {
+        font-size: 2em; /* Reduce heading size on smaller screens */
+    }
+
+    #home p {
+        font-size: 1em;
+    }
+}
